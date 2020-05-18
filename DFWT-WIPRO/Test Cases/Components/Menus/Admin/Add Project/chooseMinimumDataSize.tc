@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>chooseMinimumDataSize</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>774ea582-51cb-414a-a74b-a6932d36efdf</testCaseGuid>
+   <variable>
+      <defaultValue>'2 bytes'</defaultValue>
+      <description></description>
+      <id>a6fe0038-563b-46dd-bd82-946274d2dedf</id>
+      <masked>false</masked>
+      <name>userMinimumData</name>
+   </variable>
+</TestCaseEntity>

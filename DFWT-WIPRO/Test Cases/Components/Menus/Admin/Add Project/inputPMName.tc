@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>inputPMName</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fdeeafc6-9c57-44d2-8453-656bf954b146</testCaseGuid>
+   <variable>
+      <defaultValue>'Jake James Manzon'</defaultValue>
+      <description></description>
+      <id>0b33010b-987d-4233-a1a5-0ca17a465b06</id>
+      <masked>false</masked>
+      <name>userProjectManagerName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>inputPMUserId</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8c3e3172-d4e9-4569-899d-9db0a60fd57d</testCaseGuid>
+   <variable>
+      <defaultValue>'x1047437'</defaultValue>
+      <description></description>
+      <id>3af6d7bb-1c9a-438f-a7a7-54f97875be2a</id>
+      <masked>false</masked>
+      <name>userProjectManagerId</name>
+   </variable>
+</TestCaseEntity>

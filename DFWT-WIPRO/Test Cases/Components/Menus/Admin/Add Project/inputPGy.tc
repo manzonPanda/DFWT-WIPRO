@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>inputPGy</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8a401227-2a97-4435-8d42-3c8c1e5d85f8</testCaseGuid>
+   <variable>
+      <defaultValue>'0'</defaultValue>
+      <description></description>
+      <id>f8b1fac0-3a4d-4bdc-a7d6-fc10953ca53a</id>
+      <masked>false</masked>
+      <name>userPGy</name>
+   </variable>
+</TestCaseEntity>

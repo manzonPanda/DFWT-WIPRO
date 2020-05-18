@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>inputPGx</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0f7750f1-106f-4e37-8c9b-fde2cd506702</testCaseGuid>
+   <variable>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>3d68ca83-f842-4070-a98f-4a07d552ee60</id>
+      <masked>false</masked>
+      <name>userPGx</name>
+   </variable>
+</TestCaseEntity>

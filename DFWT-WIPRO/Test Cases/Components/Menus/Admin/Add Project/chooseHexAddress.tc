@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>chooseHexAddress</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f1038e82-7d02-4f60-8956-8499648968a0</testCaseGuid>
+   <variable>
+      <defaultValue>'2-byte'</defaultValue>
+      <description></description>
+      <id>d13762d8-af89-43cc-ad66-2fbec47d2537</id>
+      <masked>false</masked>
+      <name>userHexAddress</name>
+   </variable>
+</TestCaseEntity>

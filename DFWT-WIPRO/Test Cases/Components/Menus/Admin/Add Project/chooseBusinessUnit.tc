@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>chooseBusinessUnit</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>74a52723-5f68-43e5-8046-7f4435f818eb</testCaseGuid>
+   <variable>
+      <defaultValue>'MSP'</defaultValue>
+      <description></description>
+      <id>bd1e41c2-288c-4ef0-bef9-ddb28260cc55</id>
+      <masked>false</masked>
+      <name>userBusinessUnit</name>
+   </variable>
+</TestCaseEntity>
