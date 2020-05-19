@@ -38,7 +38,7 @@ try{
 	driver.findElement(By.xpath('//div[@id="menu"]/ul/li[5]')).click()
 	driver.findElement(By.xpath('//div[@id="menu"]/ul/li[5]/ul/li[1]')).click()
 	//wait for page to load
-	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath('//input[@value="Add"]')))
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//input[@value="Add"]')))
 }catch (Exception e) {
     KeywordUtil.markFailed('Cannot Find Add Project button')
 } 

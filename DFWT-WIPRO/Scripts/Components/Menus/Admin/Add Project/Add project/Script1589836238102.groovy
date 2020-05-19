@@ -21,7 +21,7 @@ WebUI.callTestCase(findTestCase('Components/Menus/Admin/Add Project/chooseBusine
 WebUI.callTestCase(findTestCase('Components/Menus/Admin/Add Project/inputProjectName'), [('userProjectName') : 'TempProject'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Components/Menus/Admin/Add Project/inputAlias'), [('userAlias') : ''], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Components/Menus/Admin/Add Project/inputAlias'), [('userAlias') : 'tempAlias'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Components/Menus/Admin/Add Project/inputPGx'), [('userPGx') : '1'], FailureHandling.STOP_ON_FAILURE)
 

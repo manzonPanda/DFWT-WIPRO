@@ -29,7 +29,7 @@ WebDriver driver = DriverFactory.getWebDriver()
 //WebDriver driver = new ChromeDriver(options);
 
 try{
-	driver.findElement(By.xpath('//input[@name="projectName"]')).sendKeys("userProjectName")
+	driver.findElement(By.xpath('//input[@name="projectName"]')).sendKeys(userProjectName)
 
 }catch (Exception e) {
 	KeywordUtil.markFailed('Cannot find element Project name.')

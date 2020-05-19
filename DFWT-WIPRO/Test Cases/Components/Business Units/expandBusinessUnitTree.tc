@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>expandBusinessUnitTree</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cee3d803-25f5-421b-9a18-2687374f66e4</testCaseGuid>
+   <variable>
+      <defaultValue>'MMCU'</defaultValue>
+      <description></description>
+      <id>7ffba60c-2177-4685-9da6-25e6d8b00eb1</id>
+      <masked>false</masked>
+      <name>userBusinessUnit</name>
+   </variable>
+</TestCaseEntity>

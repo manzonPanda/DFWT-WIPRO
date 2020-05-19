@@ -26,6 +26,7 @@ import org.openqa.selenium.support.ui.WebDriverWait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
+
 WebDriver driver = DriverFactory.getWebDriver()
 
 //continue with already opened browser
@@ -35,22 +36,16 @@ WebDriver driver = DriverFactory.getWebDriver()
 //WebDriver driver = new ChromeDriver(options);
 
 WebDriverWait wait = new WebDriverWait(driver, 60)
-//wait for notification dialog to appear
-wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//div[@aria-describedby="confirmationBox"]')))
-if( driver.findElement(By.xpath('//div[@aria-describedby="confirmationBox"]')).getAttribute("style").contains("block")){
-	if( driver.findElement(By.xpath('//div[@aria-describedby="confirmationBox"]/.//span[1]')).getText() == "Success Notification" ){
-		KeywordUtil.markPassed('Verified: Success Notification appeared. Project created successfully.')
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//span[text()="OK"]')))
-		driver.findElement(By.xpath('//span[text()="OK"]')).click()
-	}else{
-		KeywordUtil.markPassed('Verified: Alert notification appeared. Some of the required fields is empty.')
-	}
+
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//span[@id="confirmationBoxMsg" and contains(text(),"deleted")]')))
+
+if( driver.findElement(By.xpath('//span[@id="confirmationBoxMsg" and contains(text(),"deleted")]/parent::div/preceding-sibling::div/span')).getText() == "Success Notification" ){
+	KeywordUtil.markPassed('Verified: Success Notification appeared. Project has been successfully deleted..')
+	
+	driver.findElement(By.xpath('//span[text()="OK"]')).click()
+}else{
+	KeywordUtil.markFailed('FAILED: Project deletion notification not found.')
 }
-
-
-
-
 
 
 

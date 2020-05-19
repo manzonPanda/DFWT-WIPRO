@@ -14,52 +14,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.By as By
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
-import org.openqa.selenium.chrome.ChromeOptions
-WebDriver driver = DriverFactory.getWebDriver()
-//continue with already opened browser
-//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-//ChromeOptions options = new ChromeOptions();
-//options.setExperimentalOption("debuggerAddress", "localhost:9222")
-//WebDriver driver = new ChromeDriver(options);
 
-try{
-	driver.findElement(By.xpath('//input[@name="alias"]')).sendKeys(userAlias)
+WebUI.callTestCase(findTestCase('Components/Login/Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-}catch (Exception e) {
-	KeywordUtil.markFailed('Cannot find element Alias.')
-}
-	
+WebUI.callTestCase(findTestCase('Components/Business Units/deleteProjectFolder'), [('userBusinessUnit') : 'MSP', ('userProjectFolder') : 'TempProject'], 
+    FailureHandling.STOP_ON_FAILURE)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+WebUI.callTestCase(findTestCase('Components/Business Units/verifyProjectDeletion'), [:], FailureHandling.STOP_ON_FAILURE)
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>deleteProjectFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8ffed320-163b-4f4f-9349-4c6c6ab43a1d</testCaseGuid>
+   <variable>
+      <defaultValue>'MSP'</defaultValue>
+      <description></description>
+      <id>5655adf8-3f78-4953-985e-85ccc8976ff9</id>
+      <masked>false</masked>
+      <name>userBusinessUnit</name>
+   </variable>
+   <variable>
+      <defaultValue>'TempProject'</defaultValue>
+      <description></description>
+      <id>029a74a4-d3fc-41d2-ad0b-643c019858bf</id>
+      <masked>false</masked>
+      <name>userProjectFolder</name>
+   </variable>
+</TestCaseEntity>
