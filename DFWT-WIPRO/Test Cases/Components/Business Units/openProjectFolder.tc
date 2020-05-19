@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>openProjectFolder</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>080d7505-d7b3-474e-9e9f-44e098f1b5ab</testCaseGuid>
+   <variable>
+      <defaultValue>'TempProject'</defaultValue>
+      <description></description>
+      <id>9b475ddf-264d-4801-a49f-0cd9b7d0d82c</id>
+      <masked>false</masked>
+      <name>userProjectFolder</name>
+   </variable>
+   <variable>
+      <defaultValue>'MSP'</defaultValue>
+      <description></description>
+      <id>fffc301f-b9c3-4d69-b315-81565239359d</id>
+      <masked>false</masked>
+      <name>userBusinessUnit</name>
+   </variable>
+</TestCaseEntity>

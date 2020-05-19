@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>deleteProjectMember</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>067eaef2-1a9d-4543-99ac-3644b2122ac6</testCaseGuid>
+   <variable>
+      <defaultValue>4</defaultValue>
+      <description></description>
+      <id>06c7d5ab-e595-4642-9747-585a9a646770</id>
+      <masked>false</masked>
+      <name>userIndexRow</name>
+   </variable>
+</TestCaseEntity>
