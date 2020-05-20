@@ -26,36 +26,25 @@ import org.openqa.selenium.support.ui.WebDriverWait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
-WebDriver driver = DriverFactory.getWebDriver()
-
+//WebDriver driver = DriverFactory.getWebDriver()
 //continue with already opened browser
-//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-//ChromeOptions options = new ChromeOptions();
-//options.setExperimentalOption("debuggerAddress", "localhost:9222")
-//WebDriver driver = new ChromeDriver(options);
+System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
+ChromeOptions options = new ChromeOptions();
+options.setExperimentalOption("debuggerAddress", "localhost:9222")
+WebDriver driver = new ChromeDriver(options);
 
 WebDriverWait wait = new WebDriverWait(driver, 60)
-int userIndexRow = userIndexRow
-wait.until(ExpectedConditions.elementToBeClickable(By.xpath('//input[@value="Add Team Members"]')))
-try {
-	List <WebElement> tableRows = driver.findElements(By.xpath('//table[@id="defaultTbl"]/tbody/tr'))
-	
-	tableRows[userIndexRow+1].findElements(By.tagName("td"))[2].click()
-	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//div[@aria-describedby="confirmationBox"]')))
-	
-	if( driver.findElement(By.xpath('//div[@aria-describedby="confirmationBox"]/div/span')).getText() == "Delete Confirmation" ) {
-		KeywordUtil.markPassed("VERIFIED: Dialog confirmation equal to \"Delete Confirmation\".")
-		
-		driver.findElement(By.xpath("//span[text()='YES']")).click()
-		
-	}else {
-		KeywordUtil.markFailed("FAILED: Dialog confirmation not equal to \"Delete Confirmation\".")
-	}
-
+try{
+	driver.findElement(By.xpath('//input[@value="Add Contributor"]')).click()
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//table[@id="addFunctionTbl"]')))
 	
 }catch (Exception e) {
-	KeywordUtil.markFailed("Cannot delete table row index of ${userIndexRow}.")
-}
+    KeywordUtil.markFailed('Cannot find Add Contributor button')
+} 
+
+
+
+
 
 
 

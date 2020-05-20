@@ -26,15 +26,23 @@ import org.openqa.selenium.support.ui.WebDriverWait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
-//WebDriver driver = DriverFactory.getWebDriver()
+import org.openqa.selenium.JavascriptExecutor
+WebDriver driver = DriverFactory.getWebDriver()
 //continue with already opened browser
-System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-ChromeOptions options = new ChromeOptions();
-options.setExperimentalOption("debuggerAddress", "localhost:9222")
-WebDriver driver = new ChromeDriver(options);
+//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
+//ChromeOptions options = new ChromeOptions();
+//options.setExperimentalOption("debuggerAddress", "localhost:9222")
+//WebDriver driver = new ChromeDriver(options);
 
+WebDriverWait wait = new WebDriverWait(driver, 60)
 try{
-	driver.findElement(By.xpath('//span[text()="ADD"]')).click()
+//	driver.findElement(By.xpath('//span[text()="ADD"]')).click()
+	((JavascriptExecutor) driver).executeScript("arguments[0].click();",driver.findElement(By.xpath('//span[text()="ADD"]')))
+
+	
+
+	
+	
 }catch (Exception e) {
     KeywordUtil.markFailed('Cannot find Add button to create new team member.')
 }

@@ -21,12 +21,12 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
-//WebDriver driver = DriverFactory.getWebDriver()
+WebDriver driver = DriverFactory.getWebDriver()
 //continue with already opened browser
-System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-ChromeOptions options = new ChromeOptions();
-options.setExperimentalOption("debuggerAddress", "localhost:9222")
-WebDriver driver = new ChromeDriver(options);
+//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
+//ChromeOptions options = new ChromeOptions();
+//options.setExperimentalOption("debuggerAddress", "localhost:9222")
+//WebDriver driver = new ChromeDriver(options);
 
 try{
 	driver.findElement(By.xpath('//input[@name="fName"]')).sendKeys(userFullName)

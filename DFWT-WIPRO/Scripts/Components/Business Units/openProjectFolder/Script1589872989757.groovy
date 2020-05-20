@@ -34,12 +34,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-//WebDriver driver = DriverFactory.getWebDriver()
+WebDriver driver = DriverFactory.getWebDriver()
 //continue with opened browser
-System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-ChromeOptions options = new ChromeOptions();
-options.setExperimentalOption("debuggerAddress", "localhost:9222")
-WebDriver driver = new ChromeDriver(options);
+//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
+//ChromeOptions options = new ChromeOptions();
+//options.setExperimentalOption("debuggerAddress", "localhost:9222")
+//WebDriver driver = new ChromeDriver(options);
 
 WebDriverWait wait = new WebDriverWait(driver, 60)
 Actions action= new Actions(driver);

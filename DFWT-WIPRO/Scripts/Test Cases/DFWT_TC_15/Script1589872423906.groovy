@@ -35,3 +35,5 @@ WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Team Membe
 
 WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Team Members/clickAddButton'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Team Members/verifyAddTeamMember'), [:], FailureHandling.STOP_ON_FAILURE)
+
