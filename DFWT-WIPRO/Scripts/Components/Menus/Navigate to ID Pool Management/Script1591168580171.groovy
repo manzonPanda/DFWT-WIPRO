@@ -27,22 +27,31 @@ import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 //WebDriver driver = DriverFactory.getWebDriver()
+
 //continue with already opened browser
 System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
 ChromeOptions options = new ChromeOptions();
 options.setExperimentalOption("debuggerAddress", "localhost:9222")
 WebDriver driver = new ChromeDriver(options);
 
-List <WebElement> addTeamMemberLabels = driver.findElements(By.xpath('//table[@id="addFunctionTbl"]/tbody/tr/td/label'))
-for(WebElement label : addTeamMemberLabels){
-	if( label.getText().contains("Employee ID")  ){
-		KeywordUtil.markPassed("VERIFIED: Employee ID input field found.")
-	}else if(label.getText().contains("Full Name")){
-		KeywordUtil.markPassed("VERIFIED: Full Name input field found.")
-	}else if(label.getText().contains("Functions")) {
-		KeywordUtil.markPassed("VERIFIED: Functions input field found.")
-	}else {
-		KeywordUtil.markFailedAndStop("FAILED: Some of the input field for Adding Team Member is missing.")
-	}
-}
+WebDriverWait wait = new WebDriverWait(driver, 10)
+try{
+	driver.findElement(By.xpath('//div[@id="menu"]/ul/li[5]')).click()
+	driver.findElement(By.xpath('//div[@id="menu"]/ul/li[5]/ul/li[1]')).click()
+	//wait for page to load
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//input[@value="Add"]')))
+}catch (Exception e) {
+    KeywordUtil.markFailed('Cannot Find Add Project button')
+} 
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>inputEmployeeId</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b4068d65-a68e-4b57-b97e-fc5329fbd648</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>6f60a218-f620-4b05-b978-20d7d2b1bcae</id>
+      <masked>false</masked>
+      <name>userEmployeeId</name>
+   </variable>
+</TestCaseEntity>

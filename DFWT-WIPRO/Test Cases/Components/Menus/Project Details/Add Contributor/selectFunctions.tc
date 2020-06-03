@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>selectFunctions</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e9a1c39b-0071-44c0-a5b1-1fa662f6c9df</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>29564da1-666e-4bf8-a911-32b8c35b74c6</id>
+      <masked>false</masked>
+      <name>userFunctions</name>
+   </variable>
+</TestCaseEntity>

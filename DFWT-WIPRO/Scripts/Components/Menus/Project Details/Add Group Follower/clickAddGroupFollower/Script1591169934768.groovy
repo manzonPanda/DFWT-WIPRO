@@ -26,23 +26,23 @@ import org.openqa.selenium.support.ui.WebDriverWait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
-//WebDriver driver = DriverFactory.getWebDriver()
+WebDriver driver = DriverFactory.getWebDriver()
 //continue with already opened browser
-System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-ChromeOptions options = new ChromeOptions();
-options.setExperimentalOption("debuggerAddress", "localhost:9222")
-WebDriver driver = new ChromeDriver(options);
+//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
+//ChromeOptions options = new ChromeOptions();
+//options.setExperimentalOption("debuggerAddress", "localhost:9222")
+//WebDriver driver = new ChromeDriver(options);
 
-List <WebElement> addTeamMemberLabels = driver.findElements(By.xpath('//table[@id="addFunctionTbl"]/tbody/tr/td/label'))
-for(WebElement label : addTeamMemberLabels){
-	if( label.getText().contains("Employee ID")  ){
-		KeywordUtil.markPassed("VERIFIED: Employee ID input field found.")
-	}else if(label.getText().contains("Full Name")){
-		KeywordUtil.markPassed("VERIFIED: Full Name input field found.")
-	}else if(label.getText().contains("Functions")) {
-		KeywordUtil.markPassed("VERIFIED: Functions input field found.")
-	}else {
-		KeywordUtil.markFailedAndStop("FAILED: Some of the input field for Adding Team Member is missing.")
+WebDriverWait wait = new WebDriverWait(driver, 60)
+try{
+	driver.findElement(By.xpath('//input[@value="Add Group Follower "]')).click()
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//span[text()="ADD SIGNOFF GROUP"]')))
+	if(driver.findElement(By.xpath('//span[text()="ADD SIGNOFF GROUP"]')).displayed) {
+		KeywordUtil.markPassed('Verified: "ADD SIGNOFF GROUP" dialog appeared.')
 	}
-}
+}catch (Exception e) {
+    KeywordUtil.markFailed('Cannot find Add Group Follower button')
+} 
+
+
 

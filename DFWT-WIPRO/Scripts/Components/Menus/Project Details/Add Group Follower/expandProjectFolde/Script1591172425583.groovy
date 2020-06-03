@@ -33,6 +33,7 @@ import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.JavascriptExecutor
 
 //WebDriver driver = DriverFactory.getWebDriver()
 //continue with opened browser
@@ -58,9 +59,14 @@ for(int i=0; i<businessUnitTree.size(); i++){
 		for( int j=0; j<foldersTree.size() ; j++ ){
 			if( foldersTree[j].getText().contains(userProjectFolder) ){
 				folderFound=true
-				System.out.println(foldersTree[j].getText())
-				foldersTree[j].click()
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//input[@value="Add Team Members"]')))
+				//foldersTree[j].findElement(By.tagName("//ul/li")).click()
+				driver.findElement(By.xpath('//*[@id="treeCon"]/ul/li[6]/ul/li[28]/ul/li/span')).click()
+				WebElement element = foldersTree[j].findElement(By.xpath("//span/a"));
+//				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				//((JavascriptExecutor) driver).executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {view: window, bubbles:true, cancelable: true}))", element);
+				
+				
+				//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//input[@value="Add Team Members"]')))
 
 				break;
 			}

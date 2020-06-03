@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>expandProjectFolde</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>42008ebb-fcf3-4fb5-93af-7586e9fd7250</testCaseGuid>
+   <variable>
+      <defaultValue>'TempProject'</defaultValue>
+      <description></description>
+      <id>a6a5300a-7aa2-4622-a60a-f4abaeb1963a</id>
+      <masked>false</masked>
+      <name>userProjectFolder</name>
+   </variable>
+   <variable>
+      <defaultValue>'MSP'</defaultValue>
+      <description></description>
+      <id>1fcd1c91-48b2-4de3-a5ad-371ff1d69287</id>
+      <masked>false</masked>
+      <name>userBusinessUnit</name>
+   </variable>
+</TestCaseEntity>

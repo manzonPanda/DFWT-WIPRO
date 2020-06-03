@@ -26,23 +26,45 @@ import org.openqa.selenium.support.ui.WebDriverWait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
-//WebDriver driver = DriverFactory.getWebDriver()
-//continue with already opened browser
-System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
-ChromeOptions options = new ChromeOptions();
-options.setExperimentalOption("debuggerAddress", "localhost:9222")
-WebDriver driver = new ChromeDriver(options);
+WebDriver driver = DriverFactory.getWebDriver()
 
-List <WebElement> addTeamMemberLabels = driver.findElements(By.xpath('//table[@id="addFunctionTbl"]/tbody/tr/td/label'))
-for(WebElement label : addTeamMemberLabels){
-	if( label.getText().contains("Employee ID")  ){
-		KeywordUtil.markPassed("VERIFIED: Employee ID input field found.")
-	}else if(label.getText().contains("Full Name")){
-		KeywordUtil.markPassed("VERIFIED: Full Name input field found.")
-	}else if(label.getText().contains("Functions")) {
-		KeywordUtil.markPassed("VERIFIED: Functions input field found.")
-	}else {
-		KeywordUtil.markFailedAndStop("FAILED: Some of the input field for Adding Team Member is missing.")
+//continue with already opened browser
+//System.setProperty("webdriver.chrome.driver", DriverFactory.getChromeDriverPath());
+//ChromeOptions options = new ChromeOptions();
+//options.setExperimentalOption("debuggerAddress", "localhost:9222")
+//WebDriver driver = new ChromeDriver(options);
+
+WebDriverWait wait = new WebDriverWait(driver, 60)
+//wait for notification dialog to appear
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath('//div[@aria-describedby="confirmationBox"]')))
+if( driver.findElement(By.xpath('//div[@aria-describedby="confirmationBox"]/.//span[1]')).getText() == "Success Notification" ){
+	KeywordUtil.markPassed('VERIFIED: Success Notification appeared. Successfully added a new team member.')
+	driver.findElement(By.xpath('//span[text()="OK"]')).click()
+}else if( driver.findElement(By.xpath('(//div[@aria-describedby="confirmationBox"]/.//span)[1]')).getText() == "Alert") {
+	String alertMessage = driver.findElement(By.xpath('(//div[@aria-describedby="confirmationBox"]/.//span)[4]')).getText()
+	if( alertMessage == "Please fill out all required (*) field before adding.") {
+		KeywordUtil.markPassed("VERIFIED: Alert notification appeared. Some of the required fields is empty. \"${alertMessage}\" found.")
+	}
+	if( alertMessage.contains("function is already assigned to a user. Please enter a new user or new function.") ) {
+		KeywordUtil.markPassed("VERIFIED: Alert notification appeared. \"${alertMessage}\" found.")
+	}
+	if( alertMessage.contains("Invalid user information. Please input a valid user information.") ) {
+		KeywordUtil.markPassed("VERIFIED: Alert notification appeared. \"${alertMessage}\" found.")
 	}
 }
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

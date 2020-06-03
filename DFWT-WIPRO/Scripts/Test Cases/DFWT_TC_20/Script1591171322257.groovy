@@ -20,20 +20,6 @@ WebUI.callTestCase(findTestCase('Components/Login/Login'), [:], FailureHandling.
 WebUI.callTestCase(findTestCase('Components/Business Units/openProjectFolder'), [('userProjectFolder') : 'TempProject', ('userBusinessUnit') : 'MSP'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/clickAddContributor'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/verifyAddContributorLabel'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/selectFunctions'), [('userFunctions') : 'Poject Manager'], 
-    FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/inputEmployeeId'), [('userEmployeeId') : 'x1056225'], 
-    FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/inputFullName'), [('userFullName') : '\tFrancis John Siiten'], 
-    FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/clickAddButton'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Contributor/verifyAddContributor'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Components/Menus/Project Details/Add Group Follower/expandProjectFolde'), [('userProjectFolder') : 'TempProject'
+        , ('userBusinessUnit') : 'MSP'], FailureHandling.STOP_ON_FAILURE)
 
